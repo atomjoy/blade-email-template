@@ -1,4 +1,3 @@
-{{-- https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp --}}
 <!DOCTYPE html>
 <html lang="pl">
 
