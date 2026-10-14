@@ -148,7 +148,7 @@
 
           <tr>
             <td align="center" style="padding-top:20px;">
-              Regards © 2026 {{ config('app.name', '') }}
+              Pozdrawiamy © 2026 {{ config('app.name', '') }}
             </td>
           </tr>
         </table>
