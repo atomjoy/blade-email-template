@@ -1,3 +1,4 @@
+{{-- https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp --}}
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -89,6 +90,9 @@
         min-width: 48%;
         max-width: 48%;
       }
+      .atomjoy-product:nth-child(3n) {
+        margin-right: 1%;
+    }
       .atomjoy-product:nth-child(2n) {
         margin-right: 0px;
       }
