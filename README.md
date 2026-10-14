@@ -8,12 +8,13 @@ Minimal blade email template (verify email template in Laravel).
 
 Route::get('/test/email', function () {
 	$u = Subscriber::first();
-	
-	Mail::to('email@proton.me')->send(new PromotionEmail($u, config('app.url') . '/shop', PromotionEmail::products()));
+	$url = config('app.url') . '/shop';
 
-	return new PromotionEmail($u, config('app.url') . '/shop', PromotionEmail::products());
+	Mail::to($u->email)->send(new PromotionEmail($u, $url, PromotionEmail::products()));
+
+	return new PromotionEmail($u, $url, PromotionEmail::products());
 	
-	// Mail::to('email@proton.me')->send(new VerifySubscriberEmail($u));
+	// Mail::to($u->email)->send(new VerifySubscriberEmail($u));
 	// return new VerifySubscriberEmail($u);
 });
 ```
