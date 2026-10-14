@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Potwierdź subskrypcję</title>
+  <title>Promocja</title>
 
   <style>
     #atomjoy-body {
