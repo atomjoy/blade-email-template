@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8" />
   <title>Potwierdź subskrypcję</title>
 
   <style>
-    #ebody {
+    #atomjoy-body {
       float: left;
       width: 100%;
       font-size: 16px;
@@ -62,7 +62,7 @@
 <body style="margin:0px; padding:0;">
 
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
-         bgcolor="transparent" id="ebody">
+         bgcolor="transparent" id="atomjoy-body">
     <tr>
       <td align="center">
         {{-- Header --}}
@@ -135,25 +135,37 @@
             <td align="center" style="padding-top:20px;">
               @if (config('social.profiles.facebook'))
               <a href="{{ config('app.url', '') . '/redirect/social/facebook' }}?utm_source=newsletter&utm_medium=email&utm_campaign=footer_links" target="_blank">
-                <img src="https://raw.githubusercontent.com/atomjoy/signatures/refs/heads/main/img/social-black/facebook.png"
+                <img src="https://raw.githubusercontent.com/atomjoy/blade-email-template/refs/heads/main/icons/facebook.png"
                      alt="img" width="30px" style="border-radius: 50%;">
               </a>
               @endif
               @if (config('social.profiles.x'))
               <a href="{{ config('app.url', '') . '/redirect/social/x' }}?utm_source=newsletter&utm_medium=email&utm_campaign=footer_links" target="_blank">
-                <img src="https://raw.githubusercontent.com/atomjoy/signatures/refs/heads/main/img/social-black/twitter.png"
+                <img src="https://raw.githubusercontent.com/atomjoy/blade-email-template/refs/heads/main/icons/x.png"
                      alt="img" width="30px" style="border-radius: 50%;">
               </a>
               @endif
               @if (config('social.profiles.linkedin'))
               <a href="{{ config('app.url', '') . '/redirect/social/linkedin' }}?utm_source=newsletter&utm_medium=email&utm_campaign=footer_links" target="_blank">
-                <img src="https://raw.githubusercontent.com/atomjoy/signatures/refs/heads/main/img/social-black/linkedin.png"
+                <img src="https://raw.githubusercontent.com/atomjoy/blade-email-template/refs/heads/main/icons/linkedin.png"
                     alt="img" width="30px" style="border-radius: 50%;">
               </a>
               @endif
               @if (config('social.profiles.youtube'))
               <a href="{{ config('app.url', '') . '/redirect/social/youtube' }}?utm_source=newsletter&utm_medium=email&utm_campaign=footer_links" target="_blank">
-                <img src="https://raw.githubusercontent.com/atomjoy/signatures/refs/heads/main/img/social-black/youtube.png"
+                <img src="https://raw.githubusercontent.com/atomjoy/blade-email-template/refs/heads/main/icons/youtube.png"
+                     alt="img" width="30px" style="border-radius: 50%;">
+              </a>
+              @endif
+              @if (config('social.profiles.tiktok'))
+              <a href="{{ config('app.url', '') . '/redirect/social/tiktok' }}?utm_source=newsletter&utm_medium=email&utm_campaign=footer_links" target="_blank">
+                <img src="https://raw.githubusercontent.com/atomjoy/blade-email-template/refs/heads/main/icons/tiktok.png"
+                     alt="img" width="30px" style="border-radius: 50%;">
+              </a>
+              @endif
+              @if (config('social.profiles.behance'))
+              <a href="{{ config('app.url', '') . '/redirect/social/behance' }}?utm_source=newsletter&utm_medium=email&utm_campaign=footer_links" target="_blank">
+                <img src="https://raw.githubusercontent.com/atomjoy/blade-email-template/refs/heads/main/icons/behance.png"
                      alt="img" width="30px" style="border-radius: 50%;">
               </a>
               @endif
