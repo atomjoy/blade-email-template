@@ -64,11 +64,14 @@
       margin-right: 1%;
     }
 
+    .atomjoy-product:nth-child(3n) {
+        margin-right: 0px;
+    }
+
     a.atomjoy-product-btn {
       background: #000;
-      border-radius: 5px;
       padding: 5px 10px;
-      font-weight: 700;
+      border-radius: 3px;
       color: #ffffff;
     }
 
@@ -84,6 +87,9 @@
         min-width: 48%;
         max-width: 48%;
       }
+      .atomjoy-product:nth-child(2n) {
+        margin-right: 0px;
+      }
     }
 
     @media screen and (max-device-width:480px),
@@ -92,6 +98,7 @@
         width: 100%;
         min-width: 100%;
         max-width: 100%;
+        margin-right: 0px;
       }
 
       .w100pc {
@@ -162,43 +169,19 @@
           <tr>
             <td align="center" style="padding:0px;">
               {{-- <p class="atomjoy-mail-h2">Promocje</p> --}}
-
               <div style="float: left; width: 100%; max-width: 100%; margin: 0px; display: block;">
-                <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
-                  <img src="https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp" alt="" width="100%" style="display:block;margin-bottom:20px;border-radius: 5px;">
-                  <p>Laptop Mac Book</p>
-                  <a href="{{ $url }}" target="_blank" class="atomjoy-product-btn">35.99 PLN</a>
-                </div>
-
-                <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
-                  <img src="https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp" alt="" width="100%" style="display:block;margin-bottom:20px;border-radius: 5px;">
-                  <p>Laptop Mac Book</p>
-                  <a href="{{ $url }}" target="_blank" class="atomjoy-product-btn">35.99 PLN</a>
-                </div>
-
-                <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
-                  <img src="https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp" alt="" width="100%" style="display:block;margin-bottom:20px;border-radius: 5px;">
-                  <p>Laptop Mac Book</p>
-                  <a href="{{ $url }}" target="_blank" class="atomjoy-product-btn">35.99 PLN</a>
-                </div>
-
-                <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
-                  <img src="https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp" alt="" width="100%" style="display:block;margin-bottom:20px;border-radius: 5px;">
-                  <p>Laptop Mac Book</p>
-                  <a href="{{ $url }}" target="_blank" class="atomjoy-product-btn">35.99 PLN</a>
-                </div>
-
-                <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
-                  <img src="https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp" alt="" width="100%" style="display:block;margin-bottom:20px;border-radius: 5px;">
-                  <p>Laptop Mac Book</p>
-                  <a href="{{ $url }}" target="_blank" class="atomjoy-product-btn">35.99 PLN</a>
-                </div>
-
-                <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
-                  <img src="https://raw.githubusercontent.com/atomjoy/icons/refs/heads/main/laptop/mac3.webp" alt="" width="100%" style="display:block;margin-bottom:20px;border-radius: 5px;">
-                  <p>Laptop Mac Book</p>
-                  <a href="{{ $url }}" target="_blank" class="atomjoy-product-btn">35.99 PLN</a>
-                </div>
+                @foreach($products as $product)
+                    <div style="float: left; box-sizing: border-box;" class="atomjoy-product">
+                        <img src="{{ $product['image'] }}"
+                            alt="{{ $product['title'] }}"
+                            width="100%"
+                            style="display:block;margin-bottom:20px;border-radius: 5px;">
+                        <p>{{ $product['title'] }}</p>
+                        <a href="{{ $product['url'] }}" target="_blank" class="atomjoy-product-btn">
+                            {{ $product['price'] }}
+                        </a>
+                    </div>
+                @endforeach
               </div>
             </td>
           </tr>
