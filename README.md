@@ -1,5 +1,5 @@
 # Blade Email Template
-Minimal blade email template (verify email template in Laravel).
+Free Blade Email Template for Laravel. Clean, responsive HTML/CSS code compatible with Gmail and Proton. Ready to deploy in 5 minutes!
 
 ## Send email
 
